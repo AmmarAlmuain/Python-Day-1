@@ -1,32 +1,65 @@
 # # * Let's try to make calculator together, all you need to do is repair the code or fill the missing!
 
 
-# # TODO: I want num_1 and numb_2 variables to store int data type not string so fix this line to match the needs!
-num_1 = input()
-num_2 = input()
+# # TODO: I want num_1 and numb_2 variables to store int data type not string so fix this lines to match the needs!
+num_1 = int(input("Enter you first nummber : "))  # ! => int()
+# * int("10")
+
+
+num_2 = int(input("Enter you second nummber : "))
 operation = input("Enter the opration you want : ")
 
 # # * Try to understand the arguments of each function carefully the add function have two arguments (num_1, num_2)
 
 
-def add(num_1, num_2):
-    print(num_1 + num_2)
+def add(first_number, second_number):
+    if type(first_number) != type(1) and type(second_number) != type(1):
+        print("Bro chill, we need numbers!")
+    else:
+        print(first_number + second_number)
+
+
+def sub(first_number, second_number):
+    if type(first_number) != type(1) and type(second_number) != type(1):
+        print("Bro chill, we need numbers!")
+    else:
+        print(first_number - second_number)
+
+
+def multiply(first_number, second_number):
+    if type(first_number) != type(1) and type(second_number) != type(1):
+        print("Bro chill, we need numbers!")
+    else:
+        print(first_number * second_number)
+
+
+def divide(first_number, second_number):
+    if type(first_number) != type(1) and type(second_number) != type(1):
+        print("Bro chill, we need numbers!")
+    else:
+        print(first_number / second_number)
 
 # # TODO: Continue making functions for each operation until you done 4 currect (working!) functions!
 
 
-def calaulator(num_1, num_2, operation):
+def calculator(first_number, second_number, operation):
     # # TODO: Fix the condition underneath!
-    if operation != "ha":
-        add(num_1, num_2)
+    if operation == "+":
+        add(first_number, second_number)
     if operation == "-":
-        pass
         # # * uncomment the function below, when you done making the function first!
-        # sub(num_1, num_2)
-    # TODO: Link each function with its currect condition!
+        sub(num_1, num_2)
+    if operation == "*":
+        multiply(first_number, second_number)
+    if operation == "/":
+        divide(first_number, second_number)
+    else:
+        print("Bro this is alien operator!")
+
+    # TODO: Link each function with its currect condition in the calculator function (we already did add, and sub)!
 
 
-calaulator(num_1, num_2, operation)
+calculator(num_1, num_2, operation)
 
 # # ? You might use these links for help!
 # # * https://www.w3schools.com/python/python_conditions.asp
